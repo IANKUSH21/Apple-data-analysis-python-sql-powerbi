@@ -1,4 +1,4 @@
-APPLE INC. BUSINESS ANALYTICS PROJECT
+# APPLE INC. BUSINESS ANALYTICS PROJECT
 
 🔍 Objective
 To analyze Apple Inc.’s product performance—specifically iPhone sales—and assess revenue growth, gross margins, and regional sales trends across 2022 to 2024 using Python, SQL, and Power BI. This project demonstrates my ability to blend technical skills with business insight for data-driven storytelling.
@@ -71,9 +71,7 @@ Regional performance comparison
 
 Ranking with RANK() and filtering with HAVING, CASE, and WINDOW functions
 
-sql
-Copy
-Edit
+
 -- Calculate YoY Growth
 SELECT Category,
 ROUND((2023_Net_Sales - 2022_Net_Sales)*100 / 2022_Net_Sales, 2) AS Growth_2023_vs_2022,
