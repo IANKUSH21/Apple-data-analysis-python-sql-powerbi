@@ -117,9 +117,6 @@ Ankush Kumar | Data Analyst & Power BI Enthusiast
 🔗 LinkedIn
 
 📁 How to Use This Repo
-bash
-Copy
-Edit
 git clone https://github.com/yourusername/apple-sales-analytics
 cd apple-sales-analytics
 # Open Power BI dashboard .pbix file
