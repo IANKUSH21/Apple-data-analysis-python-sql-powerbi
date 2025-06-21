@@ -1,6 +1,6 @@
 # APPLE INC. BUSINESS ANALYTICS PROJECT
 
-![iPhone Banner](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1024px-Apple_logo_black.svg.png)
+![iPhone Banner](https://www.apple.com/v/iphone/home/bv/images/meta/iphone__ky2k6x5u6vue_og.png)
 
 ---
 
