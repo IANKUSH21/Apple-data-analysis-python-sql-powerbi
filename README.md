@@ -1,123 +1,135 @@
 # APPLE INC. BUSINESS ANALYTICS PROJECT
 
-🔍 Objective
-To analyze Apple Inc.’s product performance—specifically iPhone sales—and assess revenue growth, gross margins, and regional sales trends across 2022 to 2024 using Python, SQL, and Power BI. This project demonstrates my ability to blend technical skills with business insight for data-driven storytelling.
+![iPhone Banner](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1024px-Apple_logo_black.svg.png)
 
-🚀 Key Outcomes
-📊 Identified top-performing products and sales categories.
+---
 
-🌍 Analyzed regional net sales trends and growth patterns.
+## 🔍 OBJECTIVE
 
-💰 Compared gross margins across service and product categories.
+Analyze iPhone sales and Apple’s financial performance using Python for data cleaning and exploration, SQL for querying, and Power BI for interactive business dashboards.
 
-🧠 Built sales forecasts using regression in Python.
+---
 
-📈 Created a dynamic and visually engaging Power BI dashboard.
+## 📦 DATA SOURCES
 
-🧰 Tools & Technologies
-Tool	Usage
-Python 🐍	Data cleaning, preprocessing, exploratory analysis
-SQL 🧾	Structured querying, aggregation, growth & trend insights
-Power BI 📊	Dashboards with filters, time-trend analysis, KPI visuals
+1. **Net\_Sales\_By\_Product\_And\_Service.csv** - iPhone and other product category sales (2022–2024)
+2. **Gross\_Margin\_Values.csv** - Gross margins across product types
+3. **Segment\_Operating\_Performance.csv** - Regional net sales of Apple
 
-📂 Dataset Overview
-Used three major datasets:
+---
 
-Net_Sales_By_Product_And_Service.csv – Sales of Apple products (2022–2024)
+## ⚙️ TOOLS & TECHNOLOGIES
 
-Gross_Margin_Values.csv – Gross margins for services and products
+* Python (Pandas, Matplotlib, Seaborn, Plotly)
+* SQL (MySQL)
+* Power BI
 
-Segment_Operating_Performance.csv – Regional sales performance
+---
 
-📌 Python Analysis Highlights
-python
-Copy
-Edit
-# Total iPhone Net Sales across 3 years:
-607,255 million USD
+## 📊 PROJECT INSIGHTS
 
-# Region with highest 2024 Net Sales:
-🌎 Americas: $167,045 million
+### 🧪 PYTHON ANALYSIS HIGHLIGHTS
 
-# Average Gross Margin (2024):
-💰 $120,455 million
+* Cleaned and explored multi-year product sales data
+* Calculated Year-over-Year (YoY) growth percentages
+* Visualized gross margin trends, category-wise average sales
+* Conducted correlation analysis and built a linear regression model to predict 2024 sales
+* Generated pie, bar, and line charts to reveal category and regional trends
 
-# Linear Regression for 2024 Sales Forecast:
-- Coefficients: [-0.449 (2022), 1.486 (2023)]
-- Intercept: -1898.15
-📉 Visualizations Created in Python:
-📈 Line charts: Yearly trends by region
+### 🧠 KEY FINDINGS
 
-📊 Bar charts: Product-wise 2024 and average sales
+* **iPhone** consistently leads in sales across all years
+* **Americas** region is the top-performing market in 2024
+* **Services** segment shows continuous growth in net sales and margins
+* High correlation across 2022–2024 net sales trends
+* Products like Mac and iPad saw volatility in YoY performance
 
-🧮 Pie charts: Regional distribution of 2024 sales
+---
 
-🧪 Scatter plots with regression predictions
+## 🧮 SQL INSIGHTS
 
-Used matplotlib, seaborn, plotly, sklearn
+* Queried top-performing products and regions
+* Ranked categories using `RANK()` and `ROW_NUMBER()` functions
+* Analyzed gross margin percentages per product
+* Used conditional logic to classify product sales into High/Medium/Low
+* Performed sales trend comparison and regional performance analysis
 
-💾 SQL Query Highlights
-✔️ Top insights extracted via SQL:
+### 📌 SAMPLE QUERIES
 
-Top 5 products by net sales in 2023
+```sql
+-- Year-over-Year Growth
+SELECT
+  Category,
+  ROUND((2024_Net_Sales - 2023_Net_Sales)*100/2023_Net_Sales, 2) AS Growth_2024_vs_2023
+FROM Net_Sales_By_Product_And_Service;
 
-YOY growth (%) across all products
+-- Top 3 Products by 2023 Sales
+SELECT Category, 2023_Net_Sales
+FROM Net_Sales_By_Product_And_Service
+ORDER BY 2023_Net_Sales DESC
+LIMIT 3;
+```
 
-CASE-based sales categorization (High / Medium / Low)
+---
 
-Gross margin % by product
+## 📈 POWER BI DASHBOARD
 
-Regional performance comparison
+* **Page 1: Product Profitability Overview**
 
-Ranking with RANK() and filtering with HAVING, CASE, and WINDOW functions
+  * Bar chart: Product vs Net Sales (2024)
+  * Bar chart: Product vs Gross Margin
+  * Matrix: Product, Net Sales, Gross Margin
 
+* **Page 2: Sales Trends (2022–2024)**
 
--- Calculate YoY Growth
-SELECT Category,
-ROUND((2023_Net_Sales - 2022_Net_Sales)*100 / 2022_Net_Sales, 2) AS Growth_2023_vs_2022,
-ROUND((2024_Net_Sales - 2023_Net_Sales)*100 / 2023_Net_Sales, 2) AS Growth_2024_vs_2023
-FROM net_sales_by_product_and_service;
-📊 Power BI Dashboard
-📌 Pages Designed (No DAX Used)
-Product Profitability Overview
-→ Bar Charts, Matrix, KPIs
+  * Line chart: Category-wise trends
+  * Stacked bar chart: Category by Year
 
-Category-wise Sales Trends (2022–2024)
-→ Line chart, Stacked bars, Slicers
+* **Page 3: Regional Sales Performance**
 
-Regional Sales Performance
-→ Map visual, bar chart, matrix
+  * Map visual: Region-wise performance
+  * Line chart: Regional trend (2022–2024)
 
-Year-over-Year Growth Dashboard
-→ Line chart, KPI cards, % change analysis
+* **Page 4: YoY Sales Growth & KPIs**
 
-Sales Contribution & Comparative Ratios
-→ Pie charts, cards, bar plots
+  * KPI Cards: Total Sales comparison
+  * Manual % Change Labels
 
-⚡ All visuals are interactive, responsive, and filterable by product, year, and region.
+* **Page 5: Profitability Ratios & Segment Comparison**
 
-🌟 Key Business Insights
-iPhone remains the top revenue generator contributing over 26% to total sales in 2024.
+  * Bar and Pie charts for 2024 segment ratios
+  * Trendlines and regression predictions
 
-Services have shown continuous growth from 2022 to 2024 with increasing gross margins.
+---
 
-The Americas dominate in regional sales performance.
+## 🧑‍💻 AUTHOR
 
-Products like Mac and iPad show declining trends, calling for product innovation strategy review.
+**ANKUSH KUMAR**
+📅 May 2025
+🎓 Aspiring Data Analyst | Skilled in Python, SQL & Power BI
 
-Regression model identifies strong dependence on recent year trends for sales prediction.
+---
 
-📸 Dashboard Preview
+## 🌐 REPOSITORY STRUCTURE
 
-👨‍💻 About the Author
-Ankush Kumar | Data Analyst & Power BI Enthusiast
-💼 Proficient in SQL, Python, Financial Modeling, and Microsoft Dynamics 365
-📍 Aspiring to create impact through data-driven insights
-📧 [ak547874@gmail.com]
-🔗 LinkedIn
+```
+/
+|— Python_Analysis_Code.ipynb
+|— SQL_Queries.sql
+|— PowerBI_Dashboard.pbix
+|— datasets/
+|     |— Net_Sales_By_Product_And_Service.csv
+|     |— Gross_Margin_Values.csv
+|     |— Segment_Operating_Performance.csv
+|— README.md
+```
 
-📁 How to Use This Repo
-git clone https://github.com/yourusername/apple-sales-analytics
-cd apple-sales-analytics
-# Open Power BI dashboard .pbix file
-# View Python notebooks or run SQL scripts as needed
+---
+
+## 🏁 CONCLUSION
+
+This project demonstrates the full data analysis workflow from raw data to impactful storytelling. It reflects an ability to generate insights from multi-source financial data using Python, SQL, and Power BI—a strong portfolio piece for roles in data analytics and business intelligence.
+
+---
+
+> ⭐ If you found this project useful, feel free to star and fork the repo!
