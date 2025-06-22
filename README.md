@@ -90,15 +90,6 @@ LIMIT 3;
   * Map visual: Region-wise performance
   * Line chart: Regional trend (2022–2024)
 
-* **Page 4: YoY Sales Growth & KPIs**
-
-  * KPI Cards: Total Sales comparison
-  * Manual % Change Labels
-
-* **Page 5: Profitability Ratios & Segment Comparison**
-
-  * Bar and Pie charts for 2024 segment ratios
-  * Trendlines and regression predictions
 
 ---
 
